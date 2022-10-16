@@ -18,7 +18,7 @@ Tablo1. Table1.
 
 Tablo2. Table2.
 
-
+ Tablo2, Bu tablo akıllı kontratımızda yer alan veri yapılarını gösteren tablodur. manager isimli veri tipi Tablo1 de bahsedilen createCampaign fonksiyonunu çağıran kişidir. subcribers dediğimiz finans
 
 ![RequestStruct](https://user-images.githubusercontent.com/76453513/196037320-5a55f93e-934f-4816-a3c8-c8a7aa56de24.png)
 
