@@ -12,22 +12,22 @@ Tablo1. Table1.
  
  Table1 is a table written to ensure that our contract is distributed in more than one way while distributing it. We could have written the code for this table in different ways, but it was fair to write it this way as it provides benefits both in terms of security and gas cost. When the createCampaign function is called, the uint _mini variable is taken and the minimum required money value is taken to be an investor. We call the investor is subscriber. In the same function, the address of the person calling the function is taken and the management of the campaign is given to him. These campaigns are kept in the getPublishedCampaign function, this function does not spend gas fee.
 
-
-
 ![ContractCampaignVariables](https://user-images.githubusercontent.com/76453513/196037312-2cdb8f26-9dd2-4a0d-ad3e-4aeec40d750b.png)
 
 Tablo2. Table2.
 
- Tablo2, Bu tablo akıllı kontratımızda yer alan veri yapılarını gösteren tablodur. manager isimli veri tipi Tablo1 de bahsedilen createCampaign fonksiyonunu çağıran kişidir. subcribers dediğimiz finans
+ Tablo2, Bu tablo akıllı kontratımızda yer alan veri tiplerini gösteren tablodur. manager isimli veri tipi Tablo1 de bahsedilen createCampaign fonksiyonunu çağıran kişidir. subcribers bir mapping veri tipinde finansmanları tutan bir listedir ve adrese karşılık bool değeri tutar. Başlangıç değeri false'dur eğer finansman olabilecek kadar bir ödeme yaptıysanız o zaman adresinize karşılık gelen değer true olur ve gerçek bir subcriber olursunuz. Request bir struct yapısıdır. İçerisinde manager'in oluşturduğu istek hakkında bilgiler yer alır.
 
 ![RequestStruct](https://user-images.githubusercontent.com/76453513/196037320-5a55f93e-934f-4816-a3c8-c8a7aa56de24.png)
 
 Tablo3. Table3.
 
-
+ Tablo3, istekler hakkında bilgi içeren tablodur. recipient, finansman ve kampanya sahibi (üretici) arasındaki güven bağını arttırmayı hedefler. Üretici direk kendi hesabına parayı alamaz, para direk gitmesi istenilen tedarikçiye ulaştırılır. complete ile daha önceden onaylanan istekler için tekrardan gas ücreti harcanması önlenmiştir. acceptorsAccount ile gerekli olduğu durumlarda kimlerin bu isteği onayladığı görülmesi hedeflenmiştir.
 
 ![ContractCampaignFunctions](https://user-images.githubusercontent.com/76453513/196037327-1871d89f-8012-4c96-8776-26ceef612ccd.png)
 
 Tablo4. Table4.
 
-
+ Tablo4, fonksiyonların yer aldığı tablodur. createRequest fonksiyonu ile yeni bir istek oluşturulabilir. acceptRequest ile oluşturulan bu istekler subcribers (üyeler) tarafından onaylanır veya istenmeyen, gereksiz görünen durumlarda işlem yapılmaz. finalizeRequest fonksiyonu ile istekleri onaylayanların sayısı (acceptCount) yarıyı geçer ise complete değeri true olur. Bu da value değeri kadar miktarı recipient adresine göndererek tedariği sağlamış olur.
+ 
+ 
