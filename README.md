@@ -18,7 +18,7 @@ Tablo2. Table2.
 
  Tablo2, Bu tablo akıllı kontratımızda yer alan veri tiplerini gösteren tablodur. manager isimli veri tipi Tablo1 de bahsedilen createCampaign fonksiyonunu çağıran kişidir. subscribers bir mapping veri tipinde finansmanları tutan bir listedir ve adrese karşılık bool değeri tutar. Başlangıç değeri false'dur eğer finansman olabilecek kadar bir ödeme yaptıysanız o zaman adresinize karşılık gelen değer true olur ve gerçek bir subscriber olursunuz. Request bir struct yapısıdır. İçerisinde manager'in oluşturduğu istek hakkında bilgiler yer alır.
  
- Table2, this table is the table showing the data types included in our smart contract. The data type named manager is the person who calls the createCampaign function mentioned in Table1. subscribers is a list holding finances in a mapping data type and holds a bool value against the address. The initial value is false. İf you have paid enough to be financman then the value corresponding to your address will be true and you will be a real subscriber. Request is a struct. It contains information about the request created by the manager.
+ Table2, this table is the table showing the data types included in our smart contract. The data type named manager is the person who calls the createCampaign function mentioned in Table1. subscribers is a list holding finances in a mapping data type and holds a bool value against the address. The initial value is false. If you have paid enough to be financeman then the value corresponding to your address will be true and you will be a real subscriber. Request is a struct. It contains information about the request created by the manager.
 
 ![RequestStruct](https://user-images.githubusercontent.com/76453513/196037320-5a55f93e-934f-4816-a3c8-c8a7aa56de24.png)
 
