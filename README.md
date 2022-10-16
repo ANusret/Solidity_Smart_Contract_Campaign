@@ -3,5 +3,5 @@
 
 <p align="center">
   <img src="D:\Git\images\CampaignFactory.png" width="350" title="CampaignFactory">
-  <!--<img src="your_relative_path_here_number_2_large_name" width="350" alt="accessibility text">-->
+  <img src="D:\Git\images\CampaignFactory.png" width="350" alt="CampaignFactory">
 </p>
